@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini huracan evo spyder.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 2,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/lamborghini huracan sterrato.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 3,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini huracan STO.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 4,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/lamborghini huracan tecnica.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 5,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini revuelto.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 6,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/lamborghini sian fkp 37.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 7,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini urus performante.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 8,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/lamborghini urus S.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 9,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini urus SE.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 10,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Lamborghini Asterion.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 11,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/Lamborghini-Estoque.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 12,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Lamborghini-Terzo-Millennio.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 13,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/Rolls Royce Cullinan Series II.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 14,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Rolls Royce Black Badge Ghost Series II.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 15,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/Rolls Royce Ghost Extended Series II.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 16,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Rolls Royce Ghost Series II.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 17,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/Rolls Royce Phantom Extended.jpeg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 18,
+    "title": "Tailwind CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Rolls Royce Phantom Scintilla.jpg",
+    "date": "2024-11-21"
+  },
+  {
+    "id": 19,
+    "title": "Breaking News: React is Awesome",
+    "content": "React has revolutionized the way we build web applications. Learn more about it here...",
+    "details": "React is a JavaScript library for building user interfaces. It makes creating interactive UIs painless...",
+    "author": "John Doe",
+    "imageUrl": "/assets/lamborghini huracan STO.jpg",
+    "date": "2024-11-22"
+  },
+  {
+    "id": 20,
+    "title": "TailwindU CSS: Utility-First CSS Framework",
+    "content": "Tailwind CSS simplifies styling with utility classes...",
+    "details": "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need...",
+    "author": "Jane Smith",
+    "imageUrl": "/assets/Rolls Royce Spectre.jpg",
+    "date": "2024-11-21"
+  }
+]
