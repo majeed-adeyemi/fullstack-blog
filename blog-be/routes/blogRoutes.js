@@ -5,8 +5,8 @@ const {
   likePost,
   commentPost,
 } = require("../controllers/blogController");
-const  verifyToken  = require("../middleware/auth");
-const upload = require("../middleware/upload");
+const verifyToken = require("../middleware/auth"); // Import verifyToken
+const upload = require("../middleware/upload"); // Assuming you have an upload middleware for file upload
 
 const router = express.Router();
 

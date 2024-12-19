@@ -1,74 +1,113 @@
 const Blog = require("../models/Blog");
+const path = require("path");
 
+// Controller to create a post
 const createPost = async (req, res) => {
   try {
-    const { title, content, details, author, image } = req.body;
-    // const image = req.file ? req.file.path : null; // Get the uploaded image path
+    const { title, content } = req.body;
+    const image = req.file ? req.file.path : null;
 
-    const newPost = new Blog({
-      title,
-      content,
-      details,
-      author,
-      image,
-    });
+    if (!image) {
+      return res.status(400).json({ message: "Image is required." });
+    }
 
+    const user = req.user; // The authenticated user object
+    const author = `${user.firstName} ${user.lastName}`;
+
+    // console.log("Image saved to:", image);
+
+    const newPost = new Blog({ title, content, author, image });
     await newPost.save();
-    res
-      .status(201)
-      .json({ message: "Post created successfully", post: newPost });
+
+    const imageUrl = `${req.protocol}://${req.get(
+      "host"
+    )}/uploads/${path.basename(image)}`;
+
+    res.status(201).json({
+      message: "Post created successfully!",
+      post: { ...newPost._doc, image: imageUrl },
+    });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error creating post" });
+    console.error("Error creating post:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to create post.", error: error.message });
   }
 };
 
+// Controller to get posts
 const getPosts = async (req, res) => {
   try {
-    const posts = await Blog.find().populate("likes").populate("comments.user");
-    res.json(posts);
+    const posts = await Blog.find().populate("likes comments.user");
+
+    const postsWithImageURL = posts.map((post) => ({
+      ...post.toObject(),
+      image: post.image
+        ? `${req.protocol}://${req.get("host")}/uploads/${path.basename(
+            post.image
+          )}`
+        : null,
+    }));
+
+    res.status(200).json(postsWithImageURL);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error fetching posts" });
+    console.error("Error fetching posts:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to fetch posts.", error: error.message });
   }
 };
 
+// Controller to like a post
 const likePost = async (req, res) => {
   try {
-    const post = await Blog.findById(req.params.id);
-    if (!post) return res.status(404).json({ error: "Post not found" });
+    const postId = req.params.id;
+    const userId = req.user.id;
 
-    const userId = req.user.id; // Assuming `req.user` contains the logged-in user's ID
+    const post = await Blog.findById(postId);
+    if (!post) {
+      return res.status(404).json({ message: "Post not found." });
+    }
 
     if (post.likes.includes(userId)) {
-      post.likes = post.likes.filter((like) => like.toString() !== userId);
-      await post.save();
-      return res.json({ message: "Post unliked", post });
-    } else {
-      post.likes.push(userId);
-      await post.save();
-      return res.json({ message: "Post liked", post });
+      return res
+        .status(400)
+        .json({ message: "You have already liked this post." });
     }
+
+    post.likes.push(userId);
+    await post.save();
+
+    res.status(200).json({ message: "Post liked successfully!", post });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error liking post" });
+    console.error("Error liking post:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to like post.", error: error.message });
   }
 };
 
+// Controller to comment on a post
 const commentPost = async (req, res) => {
   try {
-    const post = await Blog.findById(req.params.id);
-    if (!post) return res.status(404).json({ error: "Post not found" });
-
+    const postId = req.params.id;
     const { text } = req.body;
     const userId = req.user.id;
 
+    const post = await Blog.findById(postId);
+    if (!post) {
+      return res.status(404).json({ message: "Post not found." });
+    }
+
     post.comments.push({ user: userId, text });
     await post.save();
-    res.json({ message: "Comment added", post });
+
+    res.status(200).json({ message: "Comment added successfully!", post });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Error adding comment" });
+    console.error("Error commenting on post:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to add comment.", error: error.message });
   }
 };
 

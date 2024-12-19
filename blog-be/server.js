@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const path = require("path");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const blogRoutes = require("./routes/blogRoutes");
@@ -11,16 +12,16 @@ connectDB();
 
 const app = express();
 
-// Middleware
 app.use(cors());
-app.use(bodyParser.json()); // Parse JSON requests
-app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Routes
+// Serve static files
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/blogs", blogRoutes);
 
-// Start Server
 const PORT = process.env.PORT;
 app.listen(PORT, () =>
   console.log(`Server running on http://localhost:${PORT}`)
